@@ -1,0 +1,9 @@
+fos_rest:
+    param_fetcher_listener:  true
+    allowed_methods_listener:  true
+    routing_loader: true
+    view:
+        view_response_listener:  'force'
+    format_listener:
+        rules:
+            - { path: ^/, prefer_extension: true, fallback_format: json, priorities: [ json, html ] }
